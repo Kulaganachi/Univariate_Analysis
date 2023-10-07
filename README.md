@@ -35,12 +35,12 @@ uploaded = files.upload()
 df = pd.read_csv('diabetes.csv')
 df
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/a973ea82-a6ff-4536-a989-fde2fa8f2e78)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/15b216be-6566-49ca-85fc-870e49e268e8)
 
 ~~~
 df.isnull().sum()
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/4f48c688-bc5d-4a5e-a835-63dd0bd7b25b)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/18de4ff5-0502-4bb2-aa73-44eaceac0b86)
 
 ~~~
 q1 = df.quantile(0.25)
@@ -48,7 +48,7 @@ q3 = df.quantile(0.75)
 iqr = q3 - q1
 iqr
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/6e7394e5-29f1-4c4a-8a19-30bc83417b1f)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/e8e9fbee-33a1-4072-b03a-9839683f5ae6)
 
 ~~~
 low = q1 - 1.5*iqr
@@ -56,52 +56,53 @@ high = q1 + 1.5*iqr
 df = df[(df >= low) & (df <= high)]
 df
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/4bbfa76a-83e1-4cdd-9010-2efe0d6684c5)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/086bfe2b-cf86-4066-bf8b-9e7ccc1707ae)
 
 ~~~
 sns.boxplot(df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/3565a67f-8913-42af-b94f-d445ed93d7ed)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/f060248e-e05c-4f49-a4b9-b557eac32db5)
 
 ~~~
 sns.displot(x ="Glucose", data = df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/23549c48-3cc3-4285-8d63-fa7de1cd3b4f)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/dea09161-d891-42b8-be03-79f9784a77cc)
 
 ~~~
 sns.displot(x ="BloodPressure", data = df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/27b0cfcf-2423-4a96-a17f-cfb992c8f3f7)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/aea19133-242d-476a-b710-52240f23e8a5)
 
 ~~~
 sns.displot(x ="BMI", data = df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/c91b5346-20d6-4595-8f27-272688589d8a)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/fcebf125-c523-41cd-883a-3972fae7df7b)
 
 ~~~
 sns.displot(x ="DiabetesPedigreeFunction", data = df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/d5e9fb36-4f18-43a1-a5ab-eb7aa0f0b41f)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/989aeb27-4254-4347-8118-2209699e60c6)
 
 ~~~
 sns.displot(x ="Age", data = df)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/be16d748-0181-4f5b-b1f7-546548236ded)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/ec6dcecf-bbf0-464f-970f-209f9eb224d7)
 
 ~~~
 from google.colab import files
 uploaded = files.upload()
 ~~~
-~~~~
+~~~
+
 df = pd.read_csv('employeesal.csv')
 df
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/4de469de-fe5f-4e08-a80d-42daa0b74005)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/8f4afbf4-d1df-4b28-afc1-b66415e60e8e)
 
 ~~~
 df.isnull().sum()
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/a961b536-3ff6-481f-847f-3d61253c2126)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/54c7e081-4594-421e-b8c2-194cd4d31ca2)
 
 ~~~
 numeric_cols = df.select_dtypes(include=[int, float])
@@ -110,7 +111,7 @@ q3 = numeric_cols.quantile(0.75);
 iqr = q3 - q1
 iqr
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/68f12eaa-9c6b-4496-b2da-cd3b374de95b)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/f23366c8-a088-49cf-a8ee-294151ea493d)
 
 ~~~
 low = q1 - 1.5*iqr
@@ -118,27 +119,27 @@ high = q1 + 1.5*iqr
 numeric_cols = numeric_cols[(numeric_cols >= low) & (numeric_cols <= high)]
 numeric_cols.dropna()
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/b0d28068-a425-4acb-b0d5-9dc6a0215ab9)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/e262feed-1e0a-4d5f-88cb-36db3439b7e8)
 
 ~~~
 sns.boxplot(numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/2b9b0e09-a6df-46b9-a48e-03f14c5f37b2)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/0921d611-d607-45ae-86c8-fe7dbaaed314)
 
 ~~~
 sns.histplot(x = 'Experience_Years',data = numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/c233661c-f0d9-432a-a2c1-b475aca1774c)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/3ced5ad9-2084-4430-95b7-96d7cf311392)
 
 ~~~
 sns.histplot(x = 'Age',data = numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/f90366fa-d68d-4282-a0bf-9a8605965906)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/ac8adfc7-c4a3-4bf8-981a-1a0ff255f4a8)
 
 ~~~
 sns.histplot(x = 'Salary',data = numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/a7749edd-a73d-4188-8b84-cb85f34cd35f)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/bd12e0f5-8a03-4971-9c9c-3c60fe555a88)
 
 ~~~
 from google.colab import files
@@ -151,17 +152,17 @@ df
 ~~~
 df.isnull().sum()
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/97041458-4196-4505-98f7-857f013f4f97)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/20159690-6b6b-456c-b01f-33cd9a8d25d0)
 
 ~~~
 df.dropna()
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/87458014-ad05-400c-aaf5-aaced7168bfd)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/24c1efc0-4bca-466f-b5a6-2dbf82e482fb)
 
 ~~~
 df.dtypes
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/190f5014-ccea-45df-8b2b-c3787bab0e53)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/6f9daa1b-e4fa-4fd6-9862-017e3c6e8e73)
 
 ~~~
 numeric_cols = df.select_dtypes(include=[float])
@@ -170,7 +171,7 @@ q3 = numeric_cols.quantile(0.75);
 iqr = q3 - q1
 iqr
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/0b9df85a-271b-42e7-96fa-b0b7034bdec4)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/9749bd24-82d2-49e6-b602-ed20ff7239b9)
 
 ~~~
 low = q1 - 1.5*iqr
@@ -180,18 +181,31 @@ numeric_cols = numeric_cols[(numeric_cols >= low) & (numeric_cols <= high)]
 ~~~
 sns.boxplot(numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/b7e6a4fe-5590-44b7-abc0-e7159f692f11)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/15e1fb17-6333-43fa-b9a8-b91cd0ae5236)
 
 ~~~
 sns.histplot(x = 'Sales',data = numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/7b0f7a20-56eb-465c-a25e-50af43f0570a)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/44b66a57-13a4-45a1-ae05-6e13b7d918a3)
 
 ~~~
 sns.countplot(x="Postal Code", data=numeric_cols)
 ~~~
-![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/2356e1e8-972a-4846-bf6e-f57a2bbdaa5c)
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/4fdf1c5e-e6de-48f1-baa6-b1b8bd8b7749)
 
-RESULT:
+
+## RESULT:
 Thus we have read the given data and performed the univariate analysis with different types of plots.
+
+
+
+
+
+
+
+
+
+
+
+
 
