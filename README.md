@@ -191,6 +191,7 @@ sns.histplot(x = 'Sales',data = numeric_cols)
 sns.countplot(x="Postal Code", data=numeric_cols)
 ~~~
 ![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/2356e1e8-972a-4846-bf6e-f57a2bbdaa5c)
+
 RESULT:
 Thus we have read the given data and performed the univariate analysis with different types of plots.
 
