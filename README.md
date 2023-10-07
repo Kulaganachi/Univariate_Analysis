@@ -110,46 +110,59 @@ q3 = numeric_cols.quantile(0.75);
 iqr = q3 - q1
 iqr
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/68f12eaa-9c6b-4496-b2da-cd3b374de95b)
+
 ~~~
 low = q1 - 1.5*iqr
 high = q1 + 1.5*iqr
 numeric_cols = numeric_cols[(numeric_cols >= low) & (numeric_cols <= high)]
 numeric_cols.dropna()
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/b0d28068-a425-4acb-b0d5-9dc6a0215ab9)
+
 ~~~
 sns.boxplot(numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/2b9b0e09-a6df-46b9-a48e-03f14c5f37b2)
+
 ~~~
 sns.histplot(x = 'Experience_Years',data = numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/c233661c-f0d9-432a-a2c1-b475aca1774c)
+
 ~~~
 sns.histplot(x = 'Age',data = numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/f90366fa-d68d-4282-a0bf-9a8605965906)
+
 ~~~
 sns.histplot(x = 'Salary',data = numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/a7749edd-a73d-4188-8b84-cb85f34cd35f)
+
 ~~~
 from google.colab import files
 uploaded = files.upload()
+~~~
+~~~
 df = pd.read_csv('SuperStore.csv')
 df
+~~~
+~~~
 df.isnull().sum()
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/97041458-4196-4505-98f7-857f013f4f97)
+
 ~~~
 df.dropna()
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/87458014-ad05-400c-aaf5-aaced7168bfd)
+
 ~~~
 df.dtypes
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/190f5014-ccea-45df-8b2b-c3787bab0e53)
+
 ~~~
 numeric_cols = df.select_dtypes(include=[float])
 q1 = numeric_cols.quantile(0.25);
@@ -157,23 +170,27 @@ q3 = numeric_cols.quantile(0.75);
 iqr = q3 - q1
 iqr
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/0b9df85a-271b-42e7-96fa-b0b7034bdec4)
+
 ~~~
 low = q1 - 1.5*iqr
 high = q1 + 1.5*iqr
 numeric_cols = numeric_cols[(numeric_cols >= low) & (numeric_cols <= high)]
+~~~
+~~~
 sns.boxplot(numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/b7e6a4fe-5590-44b7-abc0-e7159f692f11)
+
 ~~~
 sns.histplot(x = 'Sales',data = numeric_cols)
 ~~~
-image
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/7b0f7a20-56eb-465c-a25e-50af43f0570a)
+
 ~~~
 sns.countplot(x="Postal Code", data=numeric_cols)
 ~~~
-image
-
+![image](https://github.com/Kulaganachi/Univariate_Analysis/assets/133641126/2356e1e8-972a-4846-bf6e-f57a2bbdaa5c)
 RESULT:
 Thus we have read the given data and performed the univariate analysis with different types of plots.
 
