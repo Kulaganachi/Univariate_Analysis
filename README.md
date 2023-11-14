@@ -1,5 +1,5 @@
-# Univariate_Analysis
-## ODD2023-DataScience-Ex-03
+
+# Ex-03 Univariate Analysis
 ## Aim
 To read the given data and perform the univariate analysis with different types of plots.
 
